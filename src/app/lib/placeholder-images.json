@@ -1,0 +1,35 @@
+
+{
+  "placeholderImages": [
+    {
+      "id": "hero-media",
+      "description": "Modern media production studio",
+      "imageUrl": "https://picsum.photos/seed/media1/1200/600",
+      "imageHint": "media studio"
+    },
+    {
+      "id": "university-rmit",
+      "description": "RMIT University Vietnam campus",
+      "imageUrl": "https://picsum.photos/seed/rmit/600/400",
+      "imageHint": "modern university"
+    },
+    {
+      "id": "university-ussh",
+      "description": "University of Social Sciences and Humanities",
+      "imageUrl": "https://picsum.photos/seed/ussh/600/400",
+      "imageHint": "campus building"
+    },
+    {
+      "id": "university-ajc",
+      "description": "Academy of Journalism and Communication",
+      "imageUrl": "https://picsum.photos/seed/ajc/600/400",
+      "imageHint": "journalism education"
+    },
+    {
+      "id": "industry-career",
+      "description": "Professional working in digital media",
+      "imageUrl": "https://picsum.photos/seed/career/800/600",
+      "imageHint": "digital marketing"
+    }
+  ]
+}
