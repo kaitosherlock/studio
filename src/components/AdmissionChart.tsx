@@ -4,7 +4,6 @@
 import {
   Line,
   LineChart,
-  ResponsiveContainer,
   Tooltip,
   XAxis,
   YAxis,
@@ -34,9 +33,8 @@ export function AdmissionChart({ data, majors }: AdmissionChartProps) {
 
   return (
     <div className="h-[400px] w-full">
-      <ChartContainer config={chartConfig}>
-        <ResponsiveContainer width="100%" height="100%">
-          <LineChart data={data} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
+      <ChartContainer config={chartConfig} className="h-full w-full">
+        <LineChart data={data} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
             <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e2e8f0" />
             <XAxis 
               dataKey="year" 
@@ -45,7 +43,7 @@ export function AdmissionChart({ data, majors }: AdmissionChartProps) {
               tick={{ fill: '#64748b', fontSize: 12 }}
             />
             <YAxis 
-              domain={[15, 30]} 
+              domain={([dataMin, dataMax]: [number, number]) => [Math.max(0, Math.floor(dataMin) - 2), Math.ceil(dataMax) + 2]}
               axisLine={false}
               tickLine={false}
               tick={{ fill: '#64748b', fontSize: 12 }}
@@ -64,7 +62,6 @@ export function AdmissionChart({ data, majors }: AdmissionChartProps) {
               />
             ))}
           </LineChart>
-        </ResponsiveContainer>
       </ChartContainer>
     </div>
   );

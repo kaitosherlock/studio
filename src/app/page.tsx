@@ -9,12 +9,10 @@ import {
   Megaphone, 
   Users, 
   Clapperboard, 
-  Briefcase, 
   ChevronRight,
   MonitorPlay,
   Share2,
   TrendingUp,
-  Sparkles,
   Compass
 } from "lucide-react";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
@@ -60,14 +58,15 @@ export default function Home() {
       
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative h-[600px] flex items-center overflow-hidden">
+        <section className="relative h-[600px] flex items-center overflow-hidden bg-primary">
+          <div className="absolute inset-0 z-0 bg-gradient-to-br from-primary via-primary/90 to-[#0f2a6e]" />
           <div className="absolute inset-0 z-0">
             {heroImage && (
               <Image
                 src={heroImage.imageUrl}
                 alt={heroImage.description}
                 fill
-                className="object-cover brightness-[0.4]"
+                className="object-cover brightness-[0.3] mix-blend-overlay"
                 priority
                 data-ai-hint={heroImage.imageHint}
               />
@@ -85,9 +84,6 @@ export default function Home() {
               <div className="flex flex-wrap gap-4">
                 <Button size="lg" className="bg-primary hover:bg-primary/90 rounded-full h-12 px-8">
                   Bắt đầu khám phá
-                </Button>
-                <Button size="lg" variant="outline" className="bg-white/10 text-white border-white/20 hover:bg-white/20 rounded-full h-12 px-8">
-                  Tư vấn cùng AI
                 </Button>
               </div>
             </div>
@@ -140,8 +136,8 @@ export default function Home() {
                   ))}
                 </div>
                 <Button className="mt-10 rounded-full h-12 bg-primary group" asChild>
-                  <Link href="/universities" className="flex items-center gap-2">
-                    Xem danh sách các trường
+                  <Link href="/scores" className="flex items-center gap-2">
+                    Xem điểm chuẩn các trường
                     <ChevronRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </Button>
@@ -184,10 +180,7 @@ export default function Home() {
                 <MonitorPlay className="h-8 w-8 text-secondary" />
                 <span className="font-medium">Video thực tế</span>
               </Link>
-              <Link href="/recommender" className="flex flex-col items-center gap-3 p-6 bg-white/10 rounded-2xl hover:bg-white/20 transition-colors w-40">
-                <Sparkles className="h-8 w-8 text-secondary" />
-                <span className="font-medium">Tư vấn AI</span>
-              </Link>
+
             </div>
           </div>
         </section>

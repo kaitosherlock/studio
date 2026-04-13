@@ -3,15 +3,13 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Compass, GraduationCap, TrendingUp, Sparkles, Youtube } from "lucide-react";
+import { Compass, TrendingUp, Youtube } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navigation = [
   { name: "Tổng quan", href: "/", icon: Compass },
-  { name: "Trường Đại học", href: "/universities", icon: GraduationCap },
   { name: "Điểm chuẩn", href: "/scores", icon: TrendingUp },
   { name: "Video", href: "/videos", icon: Youtube },
-  { name: "Tư vấn AI", href: "/recommender", icon: Sparkles },
 ];
 
 export function MainHeader() {

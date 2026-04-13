@@ -5,26 +5,31 @@
 
 @layer base {
   :root {
-    --background: 230 15% 95%; /* #F0F1F5 */
-    --foreground: 222 47% 11%;
+    --background: 220 20% 97%; /* Nhẹ nhàng, dễ nhìn */
+    --foreground: 220 30% 12%; /* Đen đậm dễ đọc */
     --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    --card-foreground: 220 30% 12%;
     --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
-    --primary: 219 70% 45%; /* #2259C3 */
-    --primary-foreground: 210 40% 98%;
-    --secondary: 190 81% 60%; /* #47D0EA */
-    --secondary-foreground: 222 47% 11%;
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 190 81% 60%;
-    --accent-foreground: 222 47% 11%;
+    --popover-foreground: 220 30% 12%;
+    --primary: 217 72% 38%; /* Xanh đậm dễ đọc */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 24 95% 53%; /* Cam rực rỡ */
+    --secondary-foreground: 0 0% 100%;
+    --muted: 220 15% 93%;
+    --muted-foreground: 220 10% 42%; /* Xám đủ tối để đọc được */
+    --accent: 24 95% 53%;
+    --accent-foreground: 0 0% 100%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 219 70% 45%;
+    --border: 220 13% 87%;
+    --input: 220 13% 87%;
+    --ring: 217 72% 38%;
     --radius: 0.75rem;
+    --chart-1: 217 72% 45%;
+    --chart-2: 24 95% 53%;
+    --chart-3: 142 71% 40%;
+    --chart-4: 280 65% 55%;
+    --chart-5: 0 72% 51%;
   }
   .dark {
     --background: 222 47% 11%;
@@ -55,8 +60,11 @@
   }
   body {
     @apply bg-background text-foreground font-body;
+    font-size: 16px;
+    line-height: 1.7;
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-headline;
+    line-height: 1.3;
   }
 }
